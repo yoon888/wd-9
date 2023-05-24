@@ -1,73 +1,57 @@
 @charset "utf-8";
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-ul {
-    list-style: none;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-body {
-    color: #222;
-    font-size: 14px;
-    line-height: 1.5;
-    background-color: #fff;
-}
+*{margin: 0; padding: 0; box-sizing: border-box;}
+a {text-decoration: none; color: inherit;}
+ul {list-style: none;}
+body {font-size: 16px; line-height: 1.5; background-color: #fff; color: #333;}
 
 .wrap {
     width: 1000px;
     display: flex;
-    
 }
 
 .left {
+    position: relative;
     width: 200px;
     padding: 0 10px;
-    position: relative;
-
 }
 
-.logo{
-    padding: 30px 0;
+.logo {
     position: absolute;
     top: 0;
     left: 0;
+    padding: 20px 0;
 }
 
 .gnb {
-    text-align: center;
     margin-top: 110px;
+    
+}
+
+.gnb > li {
+    border: 1px solid #666;
+    border-bottom: none;
+}
+
+.gnb > li:last-child {
+    border-bottom: 1px solid #666;
 }
 
 .gnb > li > a {
     display: block;
-    border: 1px solid #666;
-    border-bottom: none;
-    padding: 14px 0;
-    font-size: 16px;
-    font-weight: bold;
+    background-color: #fff;
+    text-align: center;
+    padding: 20px 0;
 }
 
 .gnb > li:hover > a {
-    background-color: #222;
+    background-color: #333;
     color: #fff;
 }
 
-.gnb > li:last-child > a {
-    border-bottom: 1px solid #666;
-}
-
 .gnb ul {
-    display: none;
     border: 1px solid #666;
+    display: none;
 }
 
 .gnb ul li a {
@@ -77,7 +61,7 @@ body {
 
 .gnb ul li a:hover {
     background-color: #666;
-    color:#fff;
+    color: #fff;
 }
 
 .right {
@@ -85,32 +69,27 @@ body {
 }
 
 .slider {
-    position: relative;
     height: 350px;
+    position: relative;
     overflow: hidden;
 }
 
 .slide {
-    position: relative;
-}
-
-.slide div{
     position: absolute;
     top: 0;
     left: 0;
-    display: none;
 }
 
 .slide div img {
-    width: 800px;
-    height: 350px;
     display: block;
+    width: 100%;
+    height: 100%;
 }
 
 .contents {
+    display: flex;
     height: 200px;
     padding: 10px 0;
-    display: flex;
     gap: 10px;
 }
 
@@ -119,43 +98,44 @@ body {
     width: 260px;
 }
 
-.tab {}
+.tab{}
 
 .tab_title {
     display: flex;
-    gap: 6px;
+    gap: 4px;
 }
 
 .tab_title h2 {
-    width: 100%;
     height: 46px;
-    background-color: #ddd;
-    text-align: center;
     line-height: 46px;
-    font-size: 14px;
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
     font-weight: normal;
+    background-color: #ddd;
     cursor: pointer;
 }
 
 .tab_title h2.active {
-    background-color: tomato;
+    background-color: #666;
     color: #fff;
 }
 
-.tab_content {
-}
+.tab_content {}
 
 .notice {
-    padding-top: 6px;
-    /* display: none; */
+    width: 260px;
+    height: 134px;
+    padding-top: 6px
 }
 
 .notice li a {
     display: block;
-    padding: 5px;
-    overflow: hidden;
     white-space: nowrap;
+    overflow: hidden;
     text-overflow: ellipsis;
+    padding: 5px 0;
+    font-size: 14px;
 }
 
 .notice li a:hover {
@@ -163,27 +143,26 @@ body {
 }
 
 .gallery {
-    display: none;
     padding: 15px 0;
+    display: none;
 }
 
 .gallery li {
-    height: 100px;
-    width: 32%;
     float: left;
+    width: 32%;
     margin-right: 2%;
+    height: 100px;
 }
 
 .gallery li:last-child {
-    margin-right: 0;
+    margin: 0;
 }
 
 .gallery li a img {
+    display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    display: block;
-
 }
 
 .banner {
@@ -192,31 +171,38 @@ body {
 }
 
 .banner img {
+    display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
+.link {}
+
 .link ul {
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 10px;
 }
 
 .link ul li a {
     display: block;
     height: 85px;
+    line-height: 85px;
+    text-align: center;
     background-color: #ddd;
-    border-radius: 4px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    border-radius: 5px;
 }
 
-.footer {
-    height: 100px;
-    background-color: #eee;
+.link ul li a:hover {
+    background-color: #666;
+    color: #fff;
+}
+
+.footer_01 {
     display: flex;
+    height: 100px;
+    background-color: #ddd;
     align-items: center;
 }
 
@@ -235,15 +221,14 @@ body {
 
 .f_menu {
     display: flex;
-    justify-content: center;
     margin: 0 auto;
+    justify-content: center;
 }
 
 .f_menu li a {
+    position: relative;
     display: block;
     padding: 0 20px;
-    position: relative;
-
 }
 
 .f_menu li a:hover {
@@ -255,8 +240,8 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    height: 100%;
     width: 1px;
+    height: 100%;
     background-color: #999;
 }
 
@@ -266,20 +251,20 @@ body {
 
 .f_info p {
     font-size: 13px;
+    margin-top: 20px;
     color: #666;
-    margin-top: 12px;
-}
+} 
 
 .modal {
+    padding: 20px;
+    height: 300px;
+    width: 400px;
+    border: 1px solid #666;
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    width: 400px;
-    height: 300px;
     background-color: #fff;
-    padding: 40px;
-    border: 1px solid #666;
     display: none;
 }
 
@@ -290,10 +275,61 @@ body {
     background-color: #666;
     color: #fff ;
     position: absolute;
-    right: 40px;
-    bottom: 40px;
-    text-align: center; 
-    line-height: 30px;
+    bottom: 30px;
+    right: 20px;
+    text-align: center;
+    line-height: 36px;
+}
+
+.footer_02 {
+    background-color: #ddd;
+    margin-top: 10px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    
+}
+
+.copyright {
+    width: 600px;
+}
+
+.footer_02 p {
+    height: 100px;
+    line-height: 100px;
+    font-size: 13px;
+    display: block;
+    text-align: center;
+}
+
+.f_info_02 {
+    width: 200px;
+    height: 100px;
+}
+
+.sns {
+}
+
+.sns ul {
+    display: flex;
+    width: 200px;
+    height: 50px;
+    line-height: 50px;
+}
+
+.sns ul li a {
+    display: block;
+    font-size: 12px;
+    padding: 0 10px;
+    width: 100%;
 }
 
 
+
+.family {
+    align-items: center;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    margin-top: 10px;
+}
