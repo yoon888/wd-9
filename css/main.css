@@ -1,0 +1,55 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    color: #222;
+    font-size: 14px;
+    line-height: 1.5;
+    background-color: #fff;
+}
+
+.wrap {
+    width: 1000px;
+    display: flex;
+    
+}
+
+.left {
+    width: 200px;
+}
+
+.logo{
+    padding: 30px 0;
+}
+
+.gnb {
+    background-color: #ddd;
+    text-align: center;
+    padding: 0 10px;
+}
+
+.gnb > li > a {
+    
+}
+
+.gnb ul {
+    display: none;
+}
+
+.right {
+    width: 800px;
+}
