@@ -45,6 +45,10 @@ body {
 .gnb {
     text-align: center;
     margin-top: 110px;
+    position: relative;
+}
+
+.gnb > li {
 }
 
 .gnb > li > a {
@@ -66,8 +70,15 @@ body {
 }
 
 .gnb ul {
+    position: absolute;
+    top: -40px;
+    left: 100%;
+    width: 100%;
+    height: 320px;
     display: none;
-    border: 1px solid #666;
+    z-index: 100;
+    background-color: #222;
+    color: #fff;
 }
 
 .gnb ul li a {
@@ -76,8 +87,8 @@ body {
 }
 
 .gnb ul li a:hover {
-    background-color: #666;
-    color:#fff;
+    background-color: #fff;
+    color:#222;
 }
 
 .right {

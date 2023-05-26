@@ -121,14 +121,14 @@
     
     <script>
         //메뉴
-        // $('.gnb > li').hover(
-        //     function(){
-        //         $(this).find('ul').stop().slideDown()
-        //     },
-        //     function(){
-        //         $(this).find('ul').stop().slideUp()
-        //     }
-        // )
+        $('.gnb > li').hover(
+            function(){
+                $(this).find('ul').stop().show()
+            },
+            function(){
+                $(this).find('ul').stop().hide()
+            }
+        )
 
         //슬라이
         //-세로
